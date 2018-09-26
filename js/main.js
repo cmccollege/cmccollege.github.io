@@ -47,63 +47,6 @@ $(document).ready(function(){
         }
     });
 	
-	/* ========================================================================= */
-	/*	Fix Slider Height
-	/* ========================================================================= */	
-
-    // Slider Height
-    var slideHeight = $(window).height();
-    
-    $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
-
-    $(window).resize(function(){'use strict',
-        $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
-    });
-	
-	
-	
-	$("#works, #testimonial").owlCarousel({	 
-		navigation : true,
-		pagination : false,
-		slideSpeed : 700,
-		paginationSpeed : 400,
-		singleItem:true,
-		navigationText: ["<i class='fa fa-angle-left fa-lg'></i>","<i class='fa fa-angle-right fa-lg'></i>"]
-	});
-	
-	
-	/* ========================================================================= */
-	/*	Featured Project Lightbox
-	/* ========================================================================= */
-
-	$(".fancybox").fancybox({
-		padding: 0,
-
-		openEffect : 'elastic',
-		openSpeed  : 650,
-
-		closeEffect : 'elastic',
-		closeSpeed  : 550,
-
-		closeClick : true,
-			
-		beforeShow: function () {
-			this.title = $(this.element).attr('title');
-			this.title = '<h3>' + this.title + '</h3>' + '<p>' + $(this.element).parents('.portfolio-item').find('img').attr('alt') + '</p>';
-		},
-		
-		helpers : {
-			title : { 
-				type: 'inside' 
-			},
-			overlay : {
-				css : {
-					'background' : 'rgba(0,0,0,0.8)'
-				}
-			}
-		}
-	});
-
     $('body').on('click', '.moreAbout', function(){
         $('.more-content').slideDown();
         $(this).html("Read Less");
@@ -119,12 +62,11 @@ $(document).ready(function(){
 
     $('#bootstrap-touch-slider').bsTouchSlider();
 
-	('.carousel').carousel({
-      interval: 2000
-    });
+	// ('.carousel').carousel({
+ //      interval: 2000
+ //    });
 });
 
-// ========== END GOOGLE MAP ========== //
 
 var wow = new WOW ({
 	offset:       75,          // distance to the element when triggering the animation (default is 0)
