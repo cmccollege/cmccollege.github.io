@@ -1198,6 +1198,18 @@ h1.navbar-brand {
     .download-fixed img {
         width: 100%;
     }
+    .applybtn,
+    .applybtn:hover {
+        background-color: #f3b54e;
+        border-radius: 3px;
+        color: #fff;
+        display: inline-block;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 8px 15px;
+        margin: 5px 0;
+        margin-left: 5px !important;
+    }
 
 /*============================================================ 
 	Responsive Styles
